@@ -3,12 +3,23 @@
  */
 package biblioMVC;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import biblioMVC.model.ConexaoSQLite;
+import biblioMVC.model.CreateTable;
 
+import biblioMVC.view.GrapichalUserInterface;
+import java.sql.Connection;
+
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // Conectar ao banco de dados SQLite
+        Connection conexao = ConexaoSQLite.conectar();
+
+        // Criar a tabela de livros se não existir
+        CreateTable.createTableBook(conexao);
+
+       
+       
+        new GrapichalUserInterface().setVisible(true);
+        
     }
 }

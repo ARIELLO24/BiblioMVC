@@ -4,6 +4,7 @@
  */
 package biblioMVC.view;
 
+
 /**
  *
  * @author ARIELLORENZ
@@ -26,21 +27,183 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Background = new javax.swing.JPanel();
+        shelf = new javax.swing.JPanel();
+        div1 = new javax.swing.JPanel();
+        div2 = new javax.swing.JPanel();
+        div3 = new javax.swing.JPanel();
+        div4 = new javax.swing.JPanel();
+        div5 = new javax.swing.JPanel();
+        Badd = new javax.swing.JButton();
+        Bdelete = new javax.swing.JButton();
+        TitleofBook = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+
+        shelf.setBackground(new java.awt.Color(150, 75, 0));
+        shelf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 10));
+
+        div1.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout div1Layout = new javax.swing.GroupLayout(div1);
+        div1.setLayout(div1Layout);
+        div1Layout.setHorizontalGroup(
+            div1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
+        );
+        div1Layout.setVerticalGroup(
+            div1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 24, Short.MAX_VALUE)
+        );
+
+        div2.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout div2Layout = new javax.swing.GroupLayout(div2);
+        div2.setLayout(div2Layout);
+        div2Layout.setHorizontalGroup(
+            div2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        div2Layout.setVerticalGroup(
+            div2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 24, Short.MAX_VALUE)
+        );
+
+        div3.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout div3Layout = new javax.swing.GroupLayout(div3);
+        div3.setLayout(div3Layout);
+        div3Layout.setHorizontalGroup(
+            div3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        div3Layout.setVerticalGroup(
+            div3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 24, Short.MAX_VALUE)
+        );
+
+        div4.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout div4Layout = new javax.swing.GroupLayout(div4);
+        div4.setLayout(div4Layout);
+        div4Layout.setHorizontalGroup(
+            div4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        div4Layout.setVerticalGroup(
+            div4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 24, Short.MAX_VALUE)
+        );
+
+        div5.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout div5Layout = new javax.swing.GroupLayout(div5);
+        div5.setLayout(div5Layout);
+        div5Layout.setHorizontalGroup(
+            div5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        div5Layout.setVerticalGroup(
+            div5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 24, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout shelfLayout = new javax.swing.GroupLayout(shelf);
+        shelf.setLayout(shelfLayout);
+        shelfLayout.setHorizontalGroup(
+            shelfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(div1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(div2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(div3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(div5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(div4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        shelfLayout.setVerticalGroup(
+            shelfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shelfLayout.createSequentialGroup()
+                .addComponent(div3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(div1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(div2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(div5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(div4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        Badd.setBackground(new java.awt.Color(0, 51, 0));
+        Badd.setFont(new java.awt.Font("Felix Titling", 0, 15)); // NOI18N
+        Badd.setText("ADD");
+        Badd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BaddActionPerformed(evt);
+            }
+        });
+
+        Bdelete.setBackground(new java.awt.Color(0, 51, 0));
+        Bdelete.setFont(new java.awt.Font("Felix Titling", 0, 20)); // NOI18N
+        Bdelete.setText("DELETE");
+        Bdelete.setBorder(new javax.swing.border.MatteBorder(null));
+
+        TitleofBook.setFont(new java.awt.Font("Felix Titling", 0, 30)); // NOI18N
+        TitleofBook.setForeground(new java.awt.Color(0, 0, 0));
+        TitleofBook.setText("BookShop");
+
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(shelf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Bdelete, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(Badd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(97, 97, 97))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                        .addComponent(TitleofBook)
+                        .addGap(72, 72, 72))))
+        );
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(shelf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(TitleofBook)
+                .addGap(73, 73, 73)
+                .addComponent(Badd)
+                .addGap(83, 83, 83)
+                .addComponent(Bdelete)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 768, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BaddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -53,7 +216,7 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -78,5 +241,15 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Background;
+    private javax.swing.JButton Badd;
+    private javax.swing.JButton Bdelete;
+    private javax.swing.JLabel TitleofBook;
+    private javax.swing.JPanel div1;
+    private javax.swing.JPanel div2;
+    private javax.swing.JPanel div3;
+    private javax.swing.JPanel div4;
+    private javax.swing.JPanel div5;
+    private javax.swing.JPanel shelf;
     // End of variables declaration//GEN-END:variables
 }
