@@ -6,8 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class BookDAO {
-    
+public class BookDAO {  
     private Connection connection;
 
     public BookDAO() {
