@@ -14,12 +14,12 @@ public class CreateTable {
         
         try (var statement = connection.createStatement()) {
             statement.execute(sql);
-            System.out.println("Tabela de usuários criada ou já existente.");
+            System.out.println("Created or existing user table.");
             System.out.flush();
             
             return true;
         } catch (SQLException e) {
-            System.err.println("Falha ao criar a tabela de usuários: " + e.getMessage());
+            System.err.println("Failed to create user table: " + e.getMessage());
             System.err.flush();
             
             return false;

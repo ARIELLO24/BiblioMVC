@@ -19,7 +19,7 @@ public class ConexaoSQLite {
             }
         } 
         catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Erro ao conectar ao banco: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error connecting to bank: " + e.getMessage());
         }
         return conexao;
     }
@@ -31,7 +31,7 @@ public class ConexaoSQLite {
                 conexao.close();
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Erro ao desconectar do banco: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error disconnecting from the bank: " + e.getMessage());
         }
     }
 }
