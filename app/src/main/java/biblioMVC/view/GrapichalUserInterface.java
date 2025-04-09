@@ -4,7 +4,11 @@
  */
 package biblioMVC.view;
 
+import biblioMVC.controller.BookController;
+import biblioMVC.model.Book;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -47,6 +51,24 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(0, 51, 153));
         Background.setToolTipText("");
 
+        Titlei.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TitleiActionPerformed(evt);
+            }
+        });
+
+        Authori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AuthoriActionPerformed(evt);
+            }
+        });
+
+        Yeari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YeariActionPerformed(evt);
+            }
+        });
+
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         jLabel4.setText("Title");
 
@@ -64,10 +86,13 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
         jScrollPane1.setViewportView(BookList);
 
         Badd.setText("ADD");
+        Badd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BaddActionPerformed(evt);
+            }
+        });
 
         Bremove.setText("REMOVE");
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\ARIELLORENZ\\Downloads\\Cris.jpg")); // NOI18N
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
@@ -83,16 +108,18 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
                         .addComponent(Authori))
                     .addComponent(jLabel6)
                     .addComponent(Yeari, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGap(74, 74, 74)
                         .addComponent(Badd, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                         .addComponent(Bremove, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jScrollPane1)))
                 .addGap(34, 34, 34))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(307, 307, 307))
         );
@@ -108,13 +135,12 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Authori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6))
+                        .addComponent(Authori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 19, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yeari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -142,6 +168,29 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TitleiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TitleiActionPerformed
+        
+    }//GEN-LAST:event_TitleiActionPerformed
+
+    private void AuthoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AuthoriActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AuthoriActionPerformed
+
+    private void YeariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YeariActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_YeariActionPerformed
+
+    private void BaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddActionPerformed
+      String titulo = Titlei.getText();
+    String autor = Authori.getText();
+    String anoTexto = getValue().toString();
+
+    BookController controller = new BookController();
+    String resultado = controller.addBook(titulo, autor, anoTexto);
+
+    JOptionPane.showMessageDialog(this, resultado);
+    }//GEN-LAST:event_BaddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,4 +241,8 @@ public class GrapichalUserInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    private Object getValue() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
